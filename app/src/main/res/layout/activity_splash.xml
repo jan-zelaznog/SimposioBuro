@@ -8,6 +8,7 @@
     tools:context=".Splash">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,14 +24,15 @@
             android:id="@+id/logo_buro"
             android:layout_width="250dp"
             android:layout_height="88dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:paddingTop="32dp"
             android:src="@drawable/logo_buro_de_credito"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-             />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26999998" />
 
         <ImageView
             android:id="@+id/logo_simposio"
@@ -50,12 +52,13 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:cropToPadding="false"
         android:src="@drawable/bg_footer2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         android:scaleType="fitXY"
         />
 

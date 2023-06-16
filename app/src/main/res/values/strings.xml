@@ -41,6 +41,7 @@
     <string name="tv_descubre_c_mo_llegar">Descubre cómo llegar</string>
     <string name="tv_horario">16:00 \n 16:45</string>
     <string name="tv_horario_empty">16:00\n16:45</string>
+    <string name="tv_aun_no_tienes_cuenta">¿Aún no tienes cuenta?</string>
 
 
 </resources>
