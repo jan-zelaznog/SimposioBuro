@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">SimposioBuro</string>
+    <string name="hint_correo">Correo electrónico</string>
+    <string name="hint_nombre">Nombre(s)</string>
+    <string name="hint_apaterno">Apellido Paterno</string>
+    <string name="hint_amaterno">Apellido Materno</string>
+    <string name="hint_confirma_correo">Confirma correo electrónico</string>
+    <string name="hint_empresa">Empresa</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_spinner">¿Deseas participar en los talleres?</string>
+
+
+    <string name="f1">Sí</string>
+    <string name="f2">No</string>
+    <string name="tv_talleres">Talleres</string>
+    <string name="tv_13_Julio">13 de julio</string>
+    <string name="tv_conferencias">Conferencias</string>
+    <string name="tv_14_de_julio">14 de julio</string>
+    <string name="al_dar_clic">Al dar clic en \"Registrarme\" estás aceptando el</string>
+    <string name="aviso_privacidad">Aviso de Privacidad</string>
+    <string name="registrarme">Registrarme</string>
+    <string name="tv_la_industria_crediti">La industria crediticia se redefine y</string>
+    <string name="tv_el_conocimiento_avanza">el conocimiento avanza</string>
+    <string name="home_title">INICIO</string>
+    <string name="home_agenda">AGENDA</string>
+    <string name="home_ponentes">PONENTES</string>
+
+
+    <string-array name="Respuestas">
+
+
+        <item>@string/f1</item>
+        <item>@string/f2</item>
+
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_descargas">DESCARGAS</string>
+    <string name="tv_the_st_regis_m_xico_city">The St. Regis México City</string>
+    <string name="tv_descubre_c_mo_llegar">Descubre cómo llegar</string>
+    <string name="tv_horario">16:00 \n 16:45</string>
+    <string name="tv_horario_empty">16:00\n16:45</string>
+
+
+</resources>

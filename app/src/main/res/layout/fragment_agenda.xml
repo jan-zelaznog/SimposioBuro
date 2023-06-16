@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentsModule.agendaFragment.AgendaFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+
+            android:id="@+id/bg1"
+            android:layout_width="15dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_main_16_9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+
+            android:id="@+id/bg11"
+            android:layout_width="15dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_main_16_9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_13_de_julio"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_card_height"
+            app:layout_constraintStart_toEndOf="@+id/bg1"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginStart="@dimen/common_padding_min"
+            app:layout_constraintEnd_toStartOf="@+id/cv_14_de"
+            android:layout_marginTop="@dimen/common_padding_middle"
+            app:cardCornerRadius="40dp"
+
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_person_chalkboard"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_13_Julio"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_talleres"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_14_de"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_card_height"
+            app:layout_constraintEnd_toStartOf="@+id/bg11"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/cv_13_de_julio"
+            android:layout_marginStart="@dimen/common_padding_default"
+
+            android:layout_marginTop="@dimen/common_padding_middle"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardCornerRadius="40dp"
+
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_screen_users"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_14_de_julio"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_conferencias"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/rv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cv_14_de"
+            app:layout_constraintStart_toEndOf="@id/bg1"
+            app:layout_constraintEnd_toStartOf="@id/bg11"
+            tools:listitem="@layout/item_agenda_rv"
+
+
+
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

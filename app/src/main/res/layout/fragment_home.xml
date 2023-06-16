@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragmentsModule.homeFragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:id="@+id/bg1"
+            android:layout_width="15dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_main_16_9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+
+            android:id="@+id/bg11"
+            android:layout_width="15dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_main_16_9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logo_buro"
+            android:layout_width="250dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:paddingTop="32dp"
+            android:src="@drawable/logo_buro_de_credito"
+            app:layout_constraintEnd_toEndOf="@+id/bg11"
+            app:layout_constraintStart_toEndOf="@+id/bg1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logo_simposio"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:src="@drawable/logo_simposio"
+            app:layout_constraintEnd_toEndOf="@id/logo_buro"
+            app:layout_constraintStart_toStartOf="@id/logo_buro"
+            app:layout_constraintTop_toBottomOf="@id/logo_buro" />
+
+
+
+        <TextView
+            android:id="@+id/tv_la_industria"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/logo_simposio"
+            app:layout_constraintStart_toStartOf="@id/logo_simposio"
+            app:layout_constraintEnd_toEndOf="@id/logo_simposio"
+            android:text="@string/tv_la_industria_crediti"
+            />
+        <TextView
+            android:id="@+id/tv_cono_avanza"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_la_industria"
+            app:layout_constraintStart_toStartOf="@id/logo_simposio"
+            app:layout_constraintEnd_toEndOf="@id/logo_simposio"
+            android:text="@string/tv_el_conocimiento_avanza"
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:id="@+id/tv_descubre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_cono_avanza"
+            app:layout_constraintStart_toStartOf="@id/logo_simposio"
+            app:layout_constraintEnd_toEndOf="@id/logo_simposio"
+            android:text="Descubre las últimas tendencias financieras"
+            />
+        <TextView
+            android:id="@+id/tv_y_conecta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_descubre"
+            app:layout_constraintStart_toStartOf="@id/logo_simposio"
+            app:layout_constraintEnd_toEndOf="@id/logo_simposio"
+            android:text="¡y conecta con expertos de renombre mundial!"
+            />
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_13_de_julio"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_card_height"
+                app:layout_constraintStart_toEndOf="@+id/bg1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_y_conecta"
+                android:layout_marginStart="@dimen/common_padding_min"
+                app:layout_constraintEnd_toStartOf="@+id/cv_14_de"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardCornerRadius="40dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_person_chalkboard"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_13_Julio"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_talleres"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_14_de"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_card_height"
+                app:layout_constraintEnd_toStartOf="@+id/bg11"
+                app:layout_constraintTop_toBottomOf="@+id/tv_y_conecta"
+                android:layout_marginEnd="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/cv_13_de_julio"
+            android:layout_marginStart="@dimen/common_padding_default"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardCornerRadius="40dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_screen_users"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_14_de_julio"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_conferencias"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_The_St_"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_card_height"
+            app:layout_constraintEnd_toStartOf="@+id/bg11"
+            app:layout_constraintTop_toBottomOf="@+id/cv_14_de"
+            android:layout_marginEnd="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/bg1"
+            android:layout_marginStart="@dimen/common_padding_min"
+            android:layout_marginTop="@dimen/common_padding_middle"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardCornerRadius="40dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_map_location_dot"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_the_st_regis_m_xico_city"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_descubre_c_mo_llegar"/>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/bg_foo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_footer2"
+            app:layout_constraintTop_toTopOf="@id/cv_14_de"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/bg11"
+            app:layout_constraintStart_toEndOf="@id/bg1"
+
+            />
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+

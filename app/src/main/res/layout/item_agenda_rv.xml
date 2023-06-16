@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/common_padding_middle"
+
+        >
+
+
+        <TextView
+            android:id="@+id/tvHorario"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingEnd="@dimen/common_padding_min"
+            android:text="@string/tv_horario"/>
+        <TextView
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradiente"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/common_padding_min">
+
+            <TextView
+
+                android:id="@+id/tvDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+
+                />
+            <TextView
+                android:id="@+id/tvNombreApellido"
+                android:paddingTop="@dimen/common_padding_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre Apellido"
+                />
+            <TextView
+                android:id="@+id/tvCargo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cargo del ponente"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

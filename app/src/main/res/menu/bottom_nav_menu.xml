@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:title="@string/home_title"
+        android:icon="@drawable/ic_house"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_agenda"
+        android:title="@string/home_agenda"
+        android:icon="@drawable/ic_agenda"
+
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_ponentes"
+        android:title="@string/home_ponentes"
+        android:icon="@drawable/ic_ponentes"
+
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_descargas"
+        android:title="@string/home_descargas"
+        android:icon="@drawable/ic_descargas"
+
+        app:showAsAction="never"/>
+
+</menu>

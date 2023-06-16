@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registrarModule.RegistrarUsuario">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+
+                android:id="@+id/bg1"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_main_16_9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/common_padding_middle"
+                >
+
+                <ImageView
+                    android:id="@+id/logo_buro"
+                    android:layout_width="250dp"
+                    android:layout_height="88dp"
+                    android:paddingTop="32dp"
+                    android:src="@drawable/logo_buro_de_credito"
+                     />
+
+                <ImageView
+                    android:id="@+id/logo_simposio"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingBottom="50dp"
+                    android:src="@drawable/logo_simposio" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_conferencias"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_14_de_julio"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_nombre"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    android:layout_marginTop="@dimen/common_padding_default"
+
+
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAPaterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_apaterno"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    android:layout_marginTop="@dimen/common_padding_default"
+
+
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAPaterno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAMaterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_amaterno"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    android:layout_marginTop="@dimen/common_padding_default"
+
+                    >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAMaterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCorreoElectronico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_correo"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    android:layout_marginTop="@dimen/common_padding_default"
+
+                    >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCorreoElec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilConfirmaCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_confirma_correo"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etConfirmaCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmpresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_empresa"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmpresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_telefono"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="@integer/conter_max_Phone"
+                    android:inputType="phone"
+                    />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_spinner"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    >
+
+                <AutoCompleteTextView
+                    android:id="@+id/etTalleres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_marginTop="32dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_talleres"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_13_Julio"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+
+                    android:id="@+id/rv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_padding_default"
+
+
+                    />
+
+                <TextView
+                    android:paddingTop="@dimen/common_padding_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text= "@string/al_dar_clic"
+                    />
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text= "@string/aviso_privacidad"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_registrarme"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registrarme"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    app:cornerRadius="20dp"
+                    android:backgroundTintMode="screen"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>
