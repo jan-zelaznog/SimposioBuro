@@ -66,6 +66,12 @@
             app:layout_constraintStart_toStartOf="@id/logo_simposio"
             app:layout_constraintEnd_toEndOf="@id/logo_simposio"
             android:text="@string/tv_la_industria_crediti"
+
+
+            android:textColor="@color/rosa_principal"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="12sp"
+            app:flow_verticalAlign="center"
             />
         <TextView
             android:id="@+id/tv_cono_avanza"
@@ -75,6 +81,12 @@
             app:layout_constraintStart_toStartOf="@id/logo_simposio"
             app:layout_constraintEnd_toEndOf="@id/logo_simposio"
             android:text="@string/tv_el_conocimiento_avanza"
+
+            android:textColor="@color/rosa_principal"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="12sp"
+            app:flow_verticalAlign="center"
+
             />
 
         <TextView
@@ -86,6 +98,12 @@
             app:layout_constraintStart_toStartOf="@id/logo_simposio"
             app:layout_constraintEnd_toEndOf="@id/logo_simposio"
             android:text="Descubre las últimas tendencias financieras"
+
+
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="12sp"
+            app:flow_verticalAlign="center"
+
             />
         <TextView
             android:id="@+id/tv_y_conecta"
@@ -95,6 +113,12 @@
             app:layout_constraintStart_toStartOf="@id/logo_simposio"
             app:layout_constraintEnd_toEndOf="@id/logo_simposio"
             android:text="¡y conecta con expertos de renombre mundial!"
+
+
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="12sp"
+            app:flow_verticalAlign="center"
+
             />
 
 
