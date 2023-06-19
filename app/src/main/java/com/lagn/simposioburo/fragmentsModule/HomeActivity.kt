@@ -25,6 +25,9 @@ class HomeActivity : AppCompatActivity() {
         setContentView(mBinding.root)
 
         setupBottomNav()
+
+
+
     }
 
     private fun setupBottomNav(){

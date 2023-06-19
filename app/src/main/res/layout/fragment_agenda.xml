@@ -1,42 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    android:background="@drawable/bg_main"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragmentsModule.agendaFragment.AgendaFragment">
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="110dp"
 
-            android:id="@+id/bg1"
-            android:layout_width="15dp"
-            android:layout_height="0dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bg_main_16_9"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <ImageView
+        android:background="@color/white"
+        android:layout_marginStart="@dimen/common_padding_min"
+        android:layout_marginEnd="@dimen/common_padding_min"
+        >
 
-            android:id="@+id/bg11"
-            android:layout_width="15dp"
-            android:layout_height="0dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bg_main_16_9"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_13_de_julio"
             android:layout_width="0dp"
             android:layout_height="@dimen/item_card_height"
-            app:layout_constraintStart_toEndOf="@+id/bg1"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
             android:layout_marginStart="@dimen/common_padding_min"
@@ -80,7 +72,7 @@
             android:id="@+id/cv_14_de"
             android:layout_width="0dp"
             android:layout_height="@dimen/item_card_height"
-            app:layout_constraintEnd_toStartOf="@+id/bg11"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginEnd="@dimen/common_padding_min"
             app:layout_constraintStart_toEndOf="@id/cv_13_de_julio"
@@ -126,8 +118,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/cv_14_de"
-            app:layout_constraintStart_toEndOf="@id/bg1"
-            app:layout_constraintEnd_toStartOf="@id/bg11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             tools:listitem="@layout/item_agenda_rv"
 
 
@@ -142,4 +134,4 @@
 
 
 
-</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

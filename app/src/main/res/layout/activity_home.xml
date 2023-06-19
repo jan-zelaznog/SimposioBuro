@@ -7,11 +7,56 @@
     tools:context=".fragmentsModule.HomeActivity">
 
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_superior"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        app:cardElevation="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/logo_buro_nav"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:src="@drawable/logo_buro_de_credito"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/common_padding_default"
+
+                />
+
+            <ImageView
+                android:id="@+id/cerrar_sesion"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_arrow_right_from_bracket"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/common_padding_default"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 
 
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNav"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -33,6 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white"
         />
 
 
