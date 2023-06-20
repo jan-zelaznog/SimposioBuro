@@ -9,13 +9,11 @@
     tools:context=".fragmentsModule.ponentesFragment.PonentesFragment">
 
 
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_principal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-
         android:layout_marginStart="@dimen/common_padding_min"
         android:layout_marginEnd="@dimen/common_padding_min"
         app:layout_constraintEnd_toEndOf="parent"
