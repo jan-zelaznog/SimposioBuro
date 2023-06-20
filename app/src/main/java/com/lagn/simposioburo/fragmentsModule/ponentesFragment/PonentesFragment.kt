@@ -5,21 +5,32 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.lagn.simposioburo.OnClickAdapter
 import com.lagn.simposioburo.R
 import com.lagn.simposioburo.databinding.FragmentAgendaBinding
 import com.lagn.simposioburo.databinding.FragmentPonentesBinding
 import com.lagn.simposioburo.domain.model.ModelD
+import com.lagn.simposioburo.fragmentsModule.agendaFragment.AgendaFragment
 import com.lagn.simposioburo.fragmentsModule.agendaFragment.adapter.AdapterAgenda
+import com.lagn.simposioburo.fragmentsModule.descargasFragment.DescargasFragment
+import com.lagn.simposioburo.fragmentsModule.homeFragment.HomeFragment
+import com.lagn.simposioburo.fragmentsModule.ponenteDatosFragment.PonenteDatosFragment
 import com.lagn.simposioburo.fragmentsModule.ponentesFragment.adapter.AdapterPonentes
 import com.lagn.simposioburo.fragmentsModule.ponentesFragment.model.ModelPonentes
 import com.lagn.simposioburo.fragmentsModule.ponentesFragment.model.toModelPonentes
 
-class PonentesFragment : Fragment() {
+class PonentesFragment : Fragment(),OnClickAdapter {
 
     private lateinit var mBinding: FragmentPonentesBinding
     private lateinit var mAdapter: AdapterPonentes
     private lateinit var mLinearLayoutManager: LinearLayoutManager
+
+
+    private lateinit var mActiveFragment: Fragment
+
+    private lateinit var mFragmentManager: FragmentManager
 
 
 
@@ -35,6 +46,8 @@ class PonentesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecylcerView()
+
+
 
 
 
@@ -86,7 +99,7 @@ class PonentesFragment : Fragment() {
         )
         mAdapter = AdapterPonentes((datos.map {
             it.toModelPonentes()
-        } as MutableList<ModelPonentes>))
+        } as MutableList<ModelPonentes>),this)
 
         mLinearLayoutManager = LinearLayoutManager(requireContext())
 
@@ -98,6 +111,28 @@ class PonentesFragment : Fragment() {
         }
     }
 
+    override fun onCk(ponente: ModelPonentes) {
+        launchEditFragment()
+
+    }
+
+
+
+    private fun launchEditFragment(args: Bundle? = null){
+        val fragmet = PonenteDatosFragment()
+        if (args!=null) fragmet.arguments = args
+
+        val fragmentManager = this@PonentesFragment.parentFragmentManager
+
+        val fragmentTrnsatcion = fragmentManager.beginTransaction()
+
+        fragmentTrnsatcion.add(R.id.hostFragment,fragmet)
+        /*No detener la app  al dar atras */
+        fragmentTrnsatcion.commit()
+        fragmentTrnsatcion.addToBackStack(null)
+
+
+    }
 
 
 

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import androidx.recyclerview.widget.RecyclerView
+import com.lagn.simposioburo.OnClickAdapter
 import com.lagn.simposioburo.R
 
 import com.lagn.simposioburo.databinding.ItemPonentesRvBinding
@@ -13,7 +14,7 @@ import com.lagn.simposioburo.domain.model.ModelD
 import com.lagn.simposioburo.fragmentsModule.ponentesFragment.model.ModelPonentes
 
 
-class AdapterPonentes( private var datosInfo: MutableList<ModelPonentes>): RecyclerView.Adapter<AdapterPonentes.MyViewHolderPonente>() {
+class AdapterPonentes( private var datosInfo: MutableList<ModelPonentes>, private var listener: OnClickAdapter): RecyclerView.Adapter<AdapterPonentes.MyViewHolderPonente>() {
 
 
     private lateinit var contexto: Context
@@ -21,6 +22,12 @@ class AdapterPonentes( private var datosInfo: MutableList<ModelPonentes>): Recyc
     inner class MyViewHolderPonente(view: View): RecyclerView.ViewHolder(view){
 
         val mBinding = ItemPonentesRvBinding.bind(view)
+
+        fun setListener(modelPonentes: ModelPonentes){
+            with(mBinding.root){
+                setOnClickListener { listener.onCk(modelPonentes) }
+            }
+        }
 
 
     }
@@ -38,6 +45,8 @@ class AdapterPonentes( private var datosInfo: MutableList<ModelPonentes>): Recyc
         val datoInfo  = datosInfo[position]
 
         with(holder){
+
+            setListener(datoInfo)
             mBinding.tvCargoPonente.text = datoInfo.cargoPonente
             mBinding.tvNamePonenete.text = datoInfo.ponente
 

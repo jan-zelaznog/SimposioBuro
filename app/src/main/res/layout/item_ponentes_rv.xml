@@ -11,10 +11,7 @@
     android:clickable="true"
     android:focusable="true"
 
-
-
-
-
+    android:id="@+id/cardview_ponente"
     >
 
     <LinearLayout
@@ -41,6 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Alejandro Cortés Luque"
+
                 android:textColor="@color/rosa_principal"
                 android:fontFamily="@font/montserrat_bold"
                 android:textSize="20sp"
