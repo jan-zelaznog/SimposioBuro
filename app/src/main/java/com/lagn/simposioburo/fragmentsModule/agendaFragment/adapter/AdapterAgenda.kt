@@ -43,6 +43,7 @@ class AdapterAgenda(private var datosInfo: MutableList<ModelD>): RecyclerView.Ad
 
             if (datoInfo.descripcion == "Receso"){
                 mBinding.tvDescripcion.setBackgroundResource(R.drawable.gradiente)
+                mBinding.tvDescripcion.setTextColor(ContextCompat.getColor(contexto,R.color.white))
 
             }
             if (datoInfo.tallerHorario.isEmpty()){

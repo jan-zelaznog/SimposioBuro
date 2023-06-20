@@ -59,6 +59,19 @@ class DescargasFragment : Fragment() {
             ),
 
             ModelDescarga(descargaInfo = "Cómo Originar con clientes sin historial créditicio."
+            ),      ModelDescarga(descargaInfo = "Retando la gestión de cobranza actual."
+            ),
+            ModelDescarga(descargaInfo = "e-Visor financiero facilitando el análisis digtial."
+            ),
+
+            ModelDescarga(descargaInfo = "Cómo Originar con clientes sin historial créditicio."
+            ),
+            ModelDescarga(descargaInfo = "Retando la gestión de cobranza actual."
+            ),
+            ModelDescarga(descargaInfo = "e-Visor financiero facilitando el análisis digtial."
+            ),
+
+            ModelDescarga(descargaInfo = "Cómo Originar con clientes sin historial créditicio."
             ),
 
 

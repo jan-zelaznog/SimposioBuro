@@ -7,6 +7,13 @@
     android:layout_margin="@dimen/common_padding_min"
     app:cardCornerRadius="40dp"
 
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+
+
+
+
 
     >
 
@@ -25,18 +32,33 @@
             android:paddingStart="@dimen/common_padding_default"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+
+
+            >
             <TextView
                 android:id="@+id/tv_name_ponenete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Alejandro Cortés Luque"/>
+                android:text="Alejandro Cortés Luque"
+                android:textColor="@color/rosa_principal"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="20sp"
+                app:flow_verticalAlign="center"
+
+                />
 
             <TextView
                 android:id="@+id/tv_cargo_ponente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="GERENTE COMERCIAL SECTOR FINANCIERO"/>
+                android:text="GERENTE COMERCIAL SECTOR FINANCIERO"
+                android:textColor="@color/gris_textos_eobs"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="16sp"
+                app:flow_verticalAlign="center"
+
+                />
 
 
         </LinearLayout>

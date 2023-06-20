@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_regis"
+
+    android:checkable="true"
+    android:clickable="true"
+    android:focusable="true"
+
+
+
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,12 +29,19 @@
             android:paddingBottom="@dimen/common_padding_default"
             />
         
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
 
+            android:id="@+id/cv_talleres"
             android:layout_width="match_parent"
             android:layout_height="@dimen/item_card_height"
-            app:cardCornerRadius="@dimen/common_padding_min"
+            app:cardCornerRadius="40dp"
             android:elevation="@dimen/common_padding_min"
+
+
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -83,7 +100,7 @@
 
 
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
 
 
@@ -92,4 +109,4 @@
 
 
 
-</androidx.core.widget.NestedScrollView>
+</com.google.android.material.card.MaterialCardView>

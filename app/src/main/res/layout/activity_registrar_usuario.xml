@@ -276,6 +276,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text= "@string/aviso_privacidad"
+
                     android:textColor="@color/azul_principal"
                     android:fontFamily="@font/montserrat_bold"
                     android:textSize="12sp"

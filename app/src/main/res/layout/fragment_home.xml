@@ -11,15 +11,6 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-
-
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_padding_min"
         android:layout_marginEnd="@dimen/common_padding_min"
@@ -80,15 +71,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
-            android:fontFamily="@font/montserrat_regular"
             android:text="Descubre las últimas tendencias financieras"
-            android:textSize="12sp"
-            app:flow_verticalAlign="center"
+
 
 
             app:layout_constraintEnd_toEndOf="@id/logo_simposio"
             app:layout_constraintStart_toStartOf="@id/logo_simposio"
             app:layout_constraintTop_toBottomOf="@id/tv_cono_avanza"
+
+
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="12sp"
+            app:flow_verticalAlign="center"
+            android:textColor="@color/gris_textos_eobs"
+
+
 
             />
 
@@ -96,10 +93,15 @@
             android:id="@+id/tv_y_conecta"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_bold"
             android:text="¡y conecta con expertos de renombre mundial!"
+
+
+            android:fontFamily="@font/montserrat_bold"
             android:textSize="12sp"
             app:flow_verticalAlign="center"
+            android:textColor="@color/gris_textos_eobs"
+
+
 
 
             app:layout_constraintEnd_toEndOf="@id/logo_simposio"
@@ -116,10 +118,15 @@
             android:layout_marginStart="@dimen/common_padding_min"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="40dp"
+
             app:layout_constraintEnd_toStartOf="@+id/cv_14_de"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_y_conecta">
+            app:layout_constraintTop_toBottomOf="@+id/tv_y_conecta"
+
+            android:layout_margin="@dimen/common_padding_min"
+            app:cardCornerRadius="40dp"
+            android:elevation="@dimen/common_padding_middle"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -137,12 +144,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_13_Julio" />
+                    android:text="@string/tv_13_Julio"
+                    android:textColor="@color/azul_principal"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="12sp"
+                    app:flow_verticalAlign="center"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_talleres" />
+                    android:text="@string/tv_talleres"
+                    android:textColor="@color/azul_secundario"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="12sp"
+                    app:flow_verticalAlign="center"
+                    />
 
             </LinearLayout>
 
@@ -156,7 +173,11 @@
             android:layout_marginEnd="@dimen/common_padding_min"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
+
+            android:layout_margin="@dimen/common_padding_min"
             app:cardCornerRadius="40dp"
+            android:elevation="@dimen/common_padding_middle"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/cv_13_de_julio"
             app:layout_constraintTop_toBottomOf="@+id/tv_y_conecta"
@@ -177,12 +198,25 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_14_de_julio" />
+                    android:text="@string/tv_14_de_julio"
+
+                    android:textColor="@color/azul_principal"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="12sp"
+                    app:flow_verticalAlign="center"
+
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_conferencias" />
+                    android:text="@string/tv_conferencias"
+                    android:textColor="@color/azul_secundario"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="12sp"
+                    app:flow_verticalAlign="center"
+
+                    />
 
             </LinearLayout>
 
@@ -198,10 +232,18 @@
             android:layout_marginEnd="@dimen/common_padding_min"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="40dp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cv_14_de">
+            app:layout_constraintTop_toBottomOf="@+id/cv_14_de"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:cardCornerRadius="40dp"
+            android:elevation="@dimen/common_padding_middle"
+            android:layout_marginBottom="100dp"
+
+
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -217,36 +259,38 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_the_st_regis_m_xico_city" />
+                    android:text="@string/tv_the_st_regis_m_xico_city"
+
+                    android:textColor="@color/azul_principal"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="12sp"
+                    app:flow_verticalAlign="center"
+
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_descubre_c_mo_llegar" />
+                    android:text="@string/tv_descubre_c_mo_llegar"
+
+                    android:textColor="@color/azul_secundario"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="12sp"
+                    app:flow_verticalAlign="center"
+
+                    />
 
             </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/bg_foo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
 
-            android:scaleType="fitXY"
-            android:src="@drawable/bg_footer2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/cv_14_de"
-
-            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 
