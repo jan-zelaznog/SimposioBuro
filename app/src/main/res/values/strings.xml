@@ -43,6 +43,9 @@
     <string name="tv_horario_empty">16:00\n16:45</string>
     <string name="tv_aun_no_tienes_cuenta">¿Aún no tienes cuenta?</string>
     <string name="tv_lorem_ipsu">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+    <string name="dialog_cerrar_sesion">¿Seguro que desea cerrar sesión?</string>
+    <string name="dialog_salir_confirm">si</string>
+    <string name="dialog_cancel_confirm">cancelar</string>
 
 
 </resources>
