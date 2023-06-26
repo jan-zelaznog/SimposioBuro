@@ -25,6 +25,9 @@
             android:id="@+id/tvTallerHorario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="16sp"
+            android:textColor="@color/gris_textos_eobs"
             android:text="Taller en Horario 00:00 a 00:00"
             android:paddingBottom="@dimen/common_padding_default"
             />
@@ -70,7 +73,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/gris_textos_eobs"
                         />
                     <TextView
                         android:id="@+id/tvNombreApellido"
@@ -78,12 +83,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Nombre Apellido"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="16sp"
+                        android:textColor="@color/gris_textos_eobs"
                         />
                     <TextView
                         android:id="@+id/tvCargo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Cargo del ponente"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/gris_textos_eobs"
                         />
 
 

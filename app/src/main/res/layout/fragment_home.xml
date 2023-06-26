@@ -25,10 +25,10 @@
 
         <ImageView
             android:id="@+id/logo_simposio"
-            android:layout_width="250dp"
+            android:layout_width="0dp"
             android:layout_height="200dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="100dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
             android:src="@drawable/logo_simposio"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,13 +39,14 @@
             android:id="@+id/tv_la_industria"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_bold"
             android:text="@string/tv_la_industria_crediti"
+
+            android:fontFamily="@font/montserrat_bold"
             android:textColor="@color/rosa_principal"
-            android:textSize="12sp"
-
-
+            android:textSize="16sp"
             app:flow_verticalAlign="center"
+
+
             app:layout_constraintEnd_toEndOf="@id/logo_simposio"
             app:layout_constraintStart_toStartOf="@id/logo_simposio"
             app:layout_constraintTop_toBottomOf="@id/logo_simposio" />
@@ -54,12 +55,14 @@
             android:id="@+id/tv_cono_avanza"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="@string/tv_el_conocimiento_avanza"
-            android:textColor="@color/rosa_principal"
-            android:textSize="12sp"
 
+            android:text="@string/tv_el_conocimiento_avanza"
+
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/rosa_principal"
+            android:textSize="16sp"
             app:flow_verticalAlign="center"
+
             app:layout_constraintEnd_toEndOf="@id/logo_simposio"
             app:layout_constraintStart_toStartOf="@id/logo_simposio"
             app:layout_constraintTop_toBottomOf="@id/tv_la_industria"
@@ -81,7 +84,7 @@
 
 
             android:fontFamily="@font/montserrat_regular"
-            android:textSize="12sp"
+            android:textSize="14sp"
             app:flow_verticalAlign="center"
             android:textColor="@color/gris_textos_eobs"
 
@@ -97,7 +100,7 @@
 
 
             android:fontFamily="@font/montserrat_bold"
-            android:textSize="12sp"
+            android:textSize="14sp"
             app:flow_verticalAlign="center"
             android:textColor="@color/gris_textos_eobs"
 
@@ -125,8 +128,8 @@
 
             android:layout_margin="@dimen/common_padding_min"
             app:cardCornerRadius="40dp"
-            android:elevation="@dimen/common_padding_middle"
-            >
+            app:cardElevation="10dp"
+            android:focusable="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -137,17 +140,18 @@
                 >
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:src="@drawable/ic_person_chalkboard" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_13_Julio"
+
                     android:textColor="@color/azul_principal"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="23sp"
                     app:flow_verticalAlign="center"
                     />
 
@@ -155,9 +159,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_talleres"
+
                     android:textColor="@color/azul_secundario"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     app:flow_verticalAlign="center"
                     />
 
@@ -176,13 +181,14 @@
 
             android:layout_margin="@dimen/common_padding_min"
             app:cardCornerRadius="40dp"
-            android:elevation="@dimen/common_padding_middle"
+            app:cardElevation="10dp"
+
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/cv_13_de_julio"
             app:layout_constraintTop_toBottomOf="@+id/tv_y_conecta"
 
-            >
+            android:focusable="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -191,8 +197,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:src="@drawable/ic_screen_users" />
 
                 <TextView
@@ -202,7 +208,7 @@
 
                     android:textColor="@color/azul_principal"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="23sp"
                     app:flow_verticalAlign="center"
 
                     />
@@ -211,9 +217,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_conferencias"
+
                     android:textColor="@color/azul_secundario"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     app:flow_verticalAlign="center"
 
                     />
@@ -239,11 +246,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
 
             app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+
+
             android:elevation="@dimen/common_padding_middle"
             android:layout_marginBottom="100dp"
 
 
-            >
+            android:focusable="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -252,8 +262,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:src="@drawable/ic_map_location_dot" />
 
                 <TextView
@@ -263,7 +273,7 @@
 
                     android:textColor="@color/azul_principal"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="23sp"
                     app:flow_verticalAlign="center"
 
                     />
@@ -275,7 +285,7 @@
 
                     android:textColor="@color/azul_secundario"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     app:flow_verticalAlign="center"
 
                     />

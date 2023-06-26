@@ -28,11 +28,13 @@
 
         android:layout_marginTop="@dimen/common_padding_default"
         android:layout_marginEnd="@dimen/common_padding_default"
-        android:fontFamily="@font/montserrat_bold"
         android:text="Alejandro Cotés Luque"
+
+        android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/rosa_principal"
-        android:textSize="20sp"
+        android:textSize="23sp"
         app:flow_verticalAlign="center"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/img_ponente"
         app:layout_constraintTop_toTopOf="@id/img_ponente"
@@ -43,14 +45,15 @@
         android:id="@+id/tv_cargo_ponente"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_regular"
 
         android:text="GERENTE COMERCIAL SECTOR FINANCIERO"
 
         android:textColor="@color/gris_textos_eobs"
-        android:textSize="12sp"
-
+        android:textSize="16sp"
         app:flow_verticalAlign="center"
+        android:fontFamily="@font/montserrat_regular"
+
+
         app:layout_constraintEnd_toEndOf="@id/tv_nombre_ponente"
         app:layout_constraintStart_toStartOf="@id/tv_nombre_ponente"
         app:layout_constraintTop_toBottomOf="@+id/tv_nombre_ponente"
@@ -69,7 +72,7 @@
 
         android:text="@string/tv_lorem_ipsu"
         android:textColor="@color/gris_textos_eobs"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:flow_verticalAlign="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/img_ponente"

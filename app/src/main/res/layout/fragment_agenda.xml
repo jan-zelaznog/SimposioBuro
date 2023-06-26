@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="110dp"
 
         android:background="@color/white"
@@ -32,11 +32,12 @@
             android:layout_height="@dimen/item_card_height"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
             android:layout_marginStart="@dimen/common_padding_min"
             app:layout_constraintEnd_toStartOf="@+id/cv_14_de"
             android:layout_marginTop="@dimen/common_padding_middle"
+
             app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
 
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
@@ -53,18 +54,30 @@
                 >
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:src="@drawable/ic_person_chalkboard"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_13_Julio"/>
+                    android:text="@string/tv_13_Julio"
+
+                    android:textColor="@color/azul_principal"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="23sp"
+                    app:flow_verticalAlign="center"
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_talleres"/>
+                    android:text="@string/tv_talleres"
+
+                    android:textColor="@color/azul_secundario"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16sp"
+                    app:flow_verticalAlign="center"
+                    />
 
             </LinearLayout>
 
@@ -84,6 +97,8 @@
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
+
+            app:cardElevation="10dp"
             app:cardCornerRadius="40dp"
 
 
@@ -97,18 +112,29 @@
                 >
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:src="@drawable/ic_screen_users"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_14_de_julio"/>
+                    android:text="@string/tv_14_de_julio"
+                    android:textColor="@color/azul_principal"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="23sp"
+                    app:flow_verticalAlign="center"
+
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_conferencias"/>
+                    android:text="@string/tv_conferencias"
+                    android:textColor="@color/azul_secundario"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16sp"
+                    app:flow_verticalAlign="center"
+                    />
 
             </LinearLayout>
 

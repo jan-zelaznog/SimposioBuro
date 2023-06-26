@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.textfield.TextInputLayout
 import com.lagn.simposioburo.R
 import com.lagn.simposioburo.databinding.ActivityRegistrarUsuarioBinding
 import com.lagn.simposioburo.domain.model.ModelD
@@ -25,9 +27,45 @@ class RegistrarUsuario : AppCompatActivity() {
 
         setupRecylcerView()
         materialSpinner()
+        mBinding.btnRegistrarme.setOnClickListener {
+
+            if (validateFields(mBinding.tilSpinner, mBinding.tilTelefono, mBinding.tilEmpresa, mBinding.tilConfirmaCorreo, mBinding.tilCorreoElectronico, mBinding.tilAMaterno,mBinding.tilAPaterno,mBinding.tilNombre)){
+
+            }
+
+        }
 
 
     }
+
+
+    private fun validateFields(vararg textFields: TextInputLayout): Boolean {
+        var isValid = true
+
+        for (textField in textFields) {
+            if (textField.editText?.text.toString().trim().isEmpty()) {
+                textField.error = getString(R.string.helper_required)
+                textField.requestFocus()
+                isValid = false
+
+            }else textField.error = null
+        }
+
+        if (!isValid) Snackbar.make(mBinding.root, R.string.registro_no_exitoso, Snackbar.LENGTH_SHORT).show()
+        else {
+            Snackbar.make(mBinding.root, R.string.registro_exitoso, Snackbar.LENGTH_SHORT).show()
+            for (textField in textFields) {
+                textField.editText?.text?.clear()
+                textField.error = null
+            }
+
+
+        }
+
+            return isValid
+        }
+
+
 
     private fun materialSpinner(){
         val respuestas = resources.getStringArray(R.array.Respuestas)
@@ -38,22 +76,17 @@ class RegistrarUsuario : AppCompatActivity() {
 
             when(position){
                 0  ->{
-                    Toast.makeText(this, "click item = ${position}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "click item = ${id}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,mBinding.etTalleres.text, Toast.LENGTH_SHORT).show()
+
 
 
                 }
                 1  ->{
                     Toast.makeText(this, "click item = ${position}", Toast.LENGTH_SHORT).show()
-
-
                 }
-
-
             }
-
-
         }
-
     }
 
 
@@ -85,5 +118,11 @@ class RegistrarUsuario : AppCompatActivity() {
             adapter = mAdapter
         }
     }
+
+
+
+
+
+
 
 }

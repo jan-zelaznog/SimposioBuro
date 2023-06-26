@@ -22,9 +22,10 @@
             android:layout_height="match_parent"
             android:paddingEnd="@dimen/common_padding_min"
             android:text="@string/tv_horario"
+
             android:textColor="@color/gris_textos_eobs"
             android:fontFamily="@font/montserrat_regular"
-            android:textSize="12sp"
+            android:textSize="14sp"
             app:flow_verticalAlign="center"
 
             />
@@ -45,11 +46,13 @@
                 android:id="@+id/tvDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/rosa_principal"
-                android:fontFamily="@font/montserrat_regular"
-                android:textSize="12sp"
-                app:flow_verticalAlign="center"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+
+
+                android:textColor="@color/rosa_principal"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="16sp"
+                app:flow_verticalAlign="center"
 
                 />
             <TextView
@@ -61,7 +64,7 @@
 
                 android:textColor="@color/gris_textos_eobs"
                 android:fontFamily="@font/montserrat_regular"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 app:flow_verticalAlign="center"
 
                 />

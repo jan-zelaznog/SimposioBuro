@@ -20,7 +20,7 @@
     <string name="aviso_privacidad">Aviso de Privacidad</string>
     <string name="registrarme">Registrarme</string>
     <string name="tv_la_industria_crediti">La industria crediticia se redefine y</string>
-    <string name="tv_el_conocimiento_avanza">el conocimiento avanza</string>
+    <string name="tv_el_conocimiento_avanza">el conocimiento avanza.</string>
     <string name="home_title">INICIO</string>
     <string name="home_agenda">AGENDA</string>
     <string name="home_ponentes">PONENTES</string>
@@ -46,6 +46,9 @@
     <string name="dialog_cerrar_sesion">¿Seguro que desea cerrar sesión?</string>
     <string name="dialog_salir_confirm">si</string>
     <string name="dialog_cancel_confirm">cancelar</string>
+    <string name="helper_required">Requerido</string>
+    <string name="registro_exitoso">Registro exitoso</string>
+    <string name="registro_no_exitoso">Revise los campos requeridos</string>
 
 
 </resources>

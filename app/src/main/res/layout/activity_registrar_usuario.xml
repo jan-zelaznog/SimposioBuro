@@ -41,7 +41,7 @@
                     android:text="@string/tv_conferencias"
 
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="23sp"
                     app:flow_verticalAlign="center"
                     android:textColor="@color/rosa_principal"
 
@@ -53,7 +53,7 @@
 
                     android:textColor="@color/rosa_principal"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="23sp"
                     app:flow_verticalAlign="center"
                     />
 
@@ -237,7 +237,7 @@
 
                     android:textColor="@color/rosa_principal"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="23sp"
                     app:flow_verticalAlign="center"
 
                     />
@@ -247,7 +247,7 @@
                     android:text="@string/tv_13_Julio"
                     android:textColor="@color/rosa_principal"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="23sp"
                     app:flow_verticalAlign="center"
                     />
 
@@ -267,9 +267,14 @@
                     android:layout_height="wrap_content"
                     android:text= "@string/al_dar_clic"
 
+
+
+
                     android:fontFamily="@font/montserrat_regular"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     app:flow_verticalAlign="center"
+                    android:textColor="@color/gris_textos_eobs"
+
                     />
                 <TextView
 
@@ -279,7 +284,7 @@
 
                     android:textColor="@color/azul_principal"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     app:flow_verticalAlign="center"
                     />
                 <com.google.android.material.button.MaterialButton
