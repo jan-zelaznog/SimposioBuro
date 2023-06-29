@@ -41,8 +41,8 @@
 
             <ImageView
                 android:id="@+id/cerrar_sesion"
-                android:layout_width="30dp"
-                android:layout_height="0dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/ic_arrow_right_from_bracket"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

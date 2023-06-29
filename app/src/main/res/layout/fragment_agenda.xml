@@ -29,14 +29,14 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_13_de_julio"
             android:layout_width="0dp"
-            android:layout_height="@dimen/item_card_height"
+            android:layout_height="150dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="@dimen/common_padding_min"
             app:layout_constraintEnd_toStartOf="@+id/cv_14_de"
             android:layout_marginTop="@dimen/common_padding_middle"
 
-            app:cardCornerRadius="40dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="10dp"
 
             android:foreground="?android:attr/selectableItemBackground"
@@ -54,8 +54,8 @@
                 >
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/ic_person_chalkboard"
                     />
                 <TextView
@@ -86,7 +86,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_14_de"
             android:layout_width="0dp"
-            android:layout_height="@dimen/item_card_height"
+            android:layout_height="150dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginEnd="@dimen/common_padding_min"
@@ -99,7 +99,7 @@
             android:clickable="true"
 
             app:cardElevation="10dp"
-            app:cardCornerRadius="40dp"
+            app:cardCornerRadius="15dp"
 
 
             >
@@ -112,8 +112,8 @@
                 >
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/ic_screen_users"
                     />
                 <TextView

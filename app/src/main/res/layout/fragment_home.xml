@@ -84,9 +84,9 @@
 
 
             android:fontFamily="@font/montserrat_regular"
-            android:textSize="14sp"
+            android:textSize="13sp"
             app:flow_verticalAlign="center"
-            android:textColor="@color/gris_textos_eobs"
+            android:textColor="@color/black"
 
 
 
@@ -100,9 +100,9 @@
 
 
             android:fontFamily="@font/montserrat_bold"
-            android:textSize="14sp"
+            android:textSize="13sp"
             app:flow_verticalAlign="center"
-            android:textColor="@color/gris_textos_eobs"
+            android:textColor="@color/black"
 
 
 
@@ -117,7 +117,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_13_de_julio"
             android:layout_width="0dp"
-            android:layout_height="@dimen/item_card_height"
+            android:layout_height="100dp"
             android:layout_marginStart="@dimen/common_padding_min"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
@@ -127,7 +127,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_y_conecta"
 
             android:layout_margin="@dimen/common_padding_min"
-            app:cardCornerRadius="40dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="10dp"
             android:focusable="true">
 
@@ -140,8 +140,8 @@
                 >
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/ic_person_chalkboard" />
 
                 <TextView
@@ -173,14 +173,14 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_14_de"
             android:layout_width="0dp"
-            android:layout_height="@dimen/item_card_height"
+            android:layout_height="100dp"
             android:layout_marginStart="@dimen/common_padding_default"
             android:layout_marginEnd="@dimen/common_padding_min"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
 
             android:layout_margin="@dimen/common_padding_min"
-            app:cardCornerRadius="40dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="10dp"
 
 
@@ -197,8 +197,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/ic_screen_users" />
 
                 <TextView
@@ -233,7 +233,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_The_St_"
             android:layout_width="0dp"
-            android:layout_height="@dimen/item_card_height"
+            android:layout_height="100dp"
             android:layout_marginStart="@dimen/common_padding_min"
             android:layout_marginTop="@dimen/common_padding_middle"
             android:layout_marginEnd="@dimen/common_padding_min"
@@ -245,11 +245,8 @@
             app:layout_constraintTop_toBottomOf="@+id/cv_14_de"
             app:layout_constraintBottom_toBottomOf="parent"
 
-            app:cardCornerRadius="40dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="10dp"
-
-
-            android:elevation="@dimen/common_padding_middle"
             android:layout_marginBottom="100dp"
 
 
@@ -262,8 +259,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/ic_map_location_dot" />
 
                 <TextView

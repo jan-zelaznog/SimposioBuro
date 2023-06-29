@@ -76,7 +76,7 @@
 
                 android:textColor="@color/gris_textos_eobs"
                 android:fontFamily="@font/montserrat_regular"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 app:flow_verticalAlign="center"
                 />
 
