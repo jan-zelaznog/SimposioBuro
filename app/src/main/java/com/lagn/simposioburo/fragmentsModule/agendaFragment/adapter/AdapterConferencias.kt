@@ -10,19 +10,20 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.lagn.simposioburo.R
 import com.lagn.simposioburo.databinding.ItemAgendaRvBinding
+import com.lagn.simposioburo.databinding.ItemConferenciasRvBinding
 import com.lagn.simposioburo.domain.model.ModelD
 import com.lagn.simposioburo.domain.model.response.conferenciasResponse.ConferenciasResponseItem
 import com.lagn.simposioburo.domain.model.response.talleresResp.Data
 import com.lagn.simposioburo.domain.model.response.talleresResp.Talleresresp
 
 
-class AdapterAgenda(private var datosInfo: MutableList<Data>): RecyclerView.Adapter<AdapterAgenda.MyViewHolderAgenda>() {
+class AdapterConferencias(private var datosInfo: MutableList<ConferenciasResponseItem>): RecyclerView.Adapter<AdapterConferencias.MyViewHolderAgenda>() {
 
     private lateinit var contexto:Context
 
     inner class MyViewHolderAgenda(view: View): RecyclerView.ViewHolder(view){
 
-        val mBinding = ItemAgendaRvBinding.bind(view)
+        val mBinding = ItemConferenciasRvBinding.bind(view)
 
 
     }
@@ -31,7 +32,7 @@ class AdapterAgenda(private var datosInfo: MutableList<Data>): RecyclerView.Adap
 
         contexto = parent.context
 
-        val view = LayoutInflater.from(contexto).inflate(R.layout.item_agenda_rv, parent, false)
+        val view = LayoutInflater.from(contexto).inflate(R.layout.item_conferencias_rv, parent, false)
 
         return MyViewHolderAgenda(view)
     }

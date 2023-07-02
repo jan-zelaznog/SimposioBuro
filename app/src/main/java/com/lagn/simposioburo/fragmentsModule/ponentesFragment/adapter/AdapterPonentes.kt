@@ -10,11 +10,12 @@ import com.lagn.simposioburo.OnClickAdapter
 import com.lagn.simposioburo.R
 
 import com.lagn.simposioburo.databinding.ItemPonentesRvBinding
-import com.lagn.simposioburo.domain.model.ModelD
-import com.lagn.simposioburo.fragmentsModule.ponentesFragment.model.ModelPonentes
+
+import com.lagn.simposioburo.domain.model.response.ponentesResponse.PonentesResponseItem
+import com.squareup.picasso.Picasso
 
 
-class AdapterPonentes( private var datosInfo: MutableList<ModelPonentes>, private var listener: OnClickAdapter): RecyclerView.Adapter<AdapterPonentes.MyViewHolderPonente>() {
+class AdapterPonentes( private var datosInfo: MutableList<PonentesResponseItem>, private var listener: OnClickAdapter): RecyclerView.Adapter<AdapterPonentes.MyViewHolderPonente>() {
 
 
     private lateinit var contexto: Context
@@ -23,7 +24,7 @@ class AdapterPonentes( private var datosInfo: MutableList<ModelPonentes>, privat
 
         val mBinding = ItemPonentesRvBinding.bind(view)
 
-        fun setListener(modelPonentes: ModelPonentes){
+        fun setListener(modelPonentes: PonentesResponseItem){
             with(mBinding.root){
                 setOnClickListener { listener.onCk(modelPonentes) }
             }
@@ -47,8 +48,10 @@ class AdapterPonentes( private var datosInfo: MutableList<ModelPonentes>, privat
         with(holder){
 
             setListener(datoInfo)
-            mBinding.tvCargoPonente.text = datoInfo.cargoPonente
-            mBinding.tvNamePonenete.text = datoInfo.ponente
+            mBinding.tvCargoPonente.text = datoInfo.puesto
+            mBinding.tvNamePonenete.text = datoInfo.nombre
+            Picasso.with(contexto).load(datoInfo.foto).into(mBinding.imgPonente)
+
 
 
 

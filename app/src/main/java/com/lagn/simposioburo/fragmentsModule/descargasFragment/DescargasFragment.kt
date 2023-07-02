@@ -5,16 +5,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.servicestest.Common.Services
 import com.lagn.simposioburo.R
 import com.lagn.simposioburo.databinding.FragmentDescargasBinding
 import com.lagn.simposioburo.databinding.FragmentPonentesBinding
 import com.lagn.simposioburo.domain.model.ModelD
+import com.lagn.simposioburo.domain.model.response.ponentesResponse.PonentesResponse
+import com.lagn.simposioburo.domain.model.response.presentacionesResponse.PresentacionesResponse
 import com.lagn.simposioburo.fragmentsModule.descargasFragment.adapter.AdapterDescargas
 import com.lagn.simposioburo.fragmentsModule.descargasFragment.model.ModelDescarga
 import com.lagn.simposioburo.fragmentsModule.ponentesFragment.adapter.AdapterPonentes
 import com.lagn.simposioburo.fragmentsModule.ponentesFragment.model.ModelPonentes
 import com.lagn.simposioburo.fragmentsModule.ponentesFragment.model.toModelPonentes
+import com.lagn.simposioburo.services.Client
+import com.lagn.simposioburo.util.PreferenceHelper
+import com.lagn.simposioburo.util.PreferenceHelper.get
+import retrofit2.Call
+import retrofit2.Response
 
 
 class DescargasFragment : Fragment() {
@@ -22,6 +31,8 @@ class DescargasFragment : Fragment() {
     private lateinit var mBinding: FragmentDescargasBinding
     private lateinit var mAdapter: AdapterDescargas
     private lateinit var mLinearLayoutManager: LinearLayoutManager
+    var client = Client()
+    private lateinit var tokenS: String
 
 
 
@@ -37,57 +48,52 @@ class DescargasFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupRecylcerView()
+
+
+        tokenS = PreferenceHelper.defaultPrefs(requireContext()).get("access_token","")
+        Toast.makeText(requireContext(), "TOKEB: $tokenS", Toast.LENGTH_LONG).show()
+
+        getPresentaciones(tokenS)
 
 
 
 
     }
 
-    private fun setupRecylcerView() {
-        val datos = listOf<ModelDescarga>(
-            ModelDescarga(descargaInfo = "Retando la gestión de cobranza actual."
-            ),
-            ModelDescarga(descargaInfo = "e-Visor financiero facilitando el análisis digtial."
-            ),
 
-            ModelDescarga(descargaInfo = "Cómo Originar con clientes sin historial créditicio."
-            ),
-            ModelDescarga(descargaInfo = "Retando la gestión de cobranza actual."
-            ),
-            ModelDescarga(descargaInfo = "e-Visor financiero facilitando el análisis digtial."
-            ),
+    private fun getPresentaciones(token: String) {
+        val call = client.getApiClient()?.create(Services::class.java)
+        val cc = call?.getPresentaciones("Bearer $token")
+        cc?.enqueue(object : retrofit2.Callback<PresentacionesResponse> {
+            override fun onResponse(
+                call: Call<PresentacionesResponse>,
+                response: Response<PresentacionesResponse>,
+            ) {
+                val datos = response.body()
+                mAdapter = datos?.let { AdapterDescargas(it) }!!
 
-            ModelDescarga(descargaInfo = "Cómo Originar con clientes sin historial créditicio."
-            ),      ModelDescarga(descargaInfo = "Retando la gestión de cobranza actual."
-            ),
-            ModelDescarga(descargaInfo = "e-Visor financiero facilitando el análisis digtial."
-            ),
+                mLinearLayoutManager = LinearLayoutManager(requireContext())
 
-            ModelDescarga(descargaInfo = "Cómo Originar con clientes sin historial créditicio."
-            ),
-            ModelDescarga(descargaInfo = "Retando la gestión de cobranza actual."
-            ),
-            ModelDescarga(descargaInfo = "e-Visor financiero facilitando el análisis digtial."
-            ),
+                mBinding.rvDescargas.apply {
+                    setHasFixedSize(true)
 
-            ModelDescarga(descargaInfo = "Cómo Originar con clientes sin historial créditicio."
-            ),
+                    layoutManager = mLinearLayoutManager
+                    adapter = mAdapter
+                }
 
 
+            }
 
-        )
-        mAdapter = AdapterDescargas((datos as MutableList<ModelDescarga>))
+            override fun onFailure(call: Call<PresentacionesResponse>, t: Throwable) {
+                Toast.makeText(requireContext(), "Error en el servidor", Toast.LENGTH_SHORT).show()
 
-        mLinearLayoutManager = LinearLayoutManager(requireContext())
+            }
 
-        mBinding.rvDescargas.apply {
-            setHasFixedSize(true)
+        })
 
-            layoutManager = mLinearLayoutManager
-            adapter = mAdapter
-        }
     }
+
+
 
 
 }

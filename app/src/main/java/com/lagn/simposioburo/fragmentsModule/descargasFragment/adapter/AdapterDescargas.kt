@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.lagn.simposioburo.R
 import com.lagn.simposioburo.databinding.ItemDescargasRvBinding
+import com.lagn.simposioburo.domain.model.response.presentacionesResponse.PresentacionesResponse
+import com.lagn.simposioburo.domain.model.response.presentacionesResponse.PresentacionesResponseItem
 
 import com.lagn.simposioburo.fragmentsModule.descargasFragment.model.ModelDescarga
 
-class AdapterDescargas(private var datosInfo: MutableList<ModelDescarga>) : RecyclerView.Adapter<AdapterDescargas.MyViewHolderDescarga>() {
+class AdapterDescargas(private var datosInfo: MutableList<PresentacionesResponseItem>) : RecyclerView.Adapter<AdapterDescargas.MyViewHolderDescarga>() {
 
 
     private lateinit var contexto: Context
@@ -35,9 +37,7 @@ class AdapterDescargas(private var datosInfo: MutableList<ModelDescarga>) : Recy
         val datoInfo  = datosInfo.get(position)
 
         with(holder){
-            mBinding.tvDescarga.text = datoInfo.descargaInfo
-
-
+            mBinding.tvDescarga.text = datoInfo.titulo
 
 
 

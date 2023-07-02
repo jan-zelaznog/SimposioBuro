@@ -2,7 +2,13 @@ package com.lagn.simposioburo.domain.model
 
 import com.google.gson.annotations.SerializedName
 
-class LoginModel {
+data class LoginModel (
+    @SerializedName("email")
+    var email: String
+
+
+    )
+/*class LoginModel {
     @SerializedName("email")
     private var email: String = ""
 
@@ -13,4 +19,4 @@ class LoginModel {
     fun getEmail(): String? {
         return this.email
     }
-}
+}*/
