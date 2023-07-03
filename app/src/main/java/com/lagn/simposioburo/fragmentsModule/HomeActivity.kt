@@ -13,6 +13,8 @@ import com.lagn.simposioburo.fragmentsModule.agendaFragment.AgendaFragment
 import com.lagn.simposioburo.fragmentsModule.descargasFragment.DescargasFragment
 import com.lagn.simposioburo.fragmentsModule.homeFragment.HomeFragment
 import com.lagn.simposioburo.fragmentsModule.ponentesFragment.PonentesFragment
+import com.lagn.simposioburo.util.PreferenceHelper
+import com.lagn.simposioburo.util.PreferenceHelper.set
 
 class HomeActivity : AppCompatActivity() {
 
@@ -40,6 +42,7 @@ class HomeActivity : AppCompatActivity() {
             MaterialAlertDialogBuilder(this)
                 .setTitle(R.string.dialog_cerrar_sesion)
                 .setPositiveButton(R.string.dialog_salir_confirm) { _, _ ->
+                    cerrarSesionPref()
                    startActivity(Intent(this,MainActivity::class.java))
                     finish()
                 }
@@ -47,6 +50,11 @@ class HomeActivity : AppCompatActivity() {
                 .show()
 
         }
+    }
+
+    private fun cerrarSesionPref(){
+        val preferences = PreferenceHelper.defaultPrefs(this)
+        preferences["access_token"]= ""
     }
 
     private fun setupBottomNav(){
