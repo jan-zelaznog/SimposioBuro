@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.example.servicestest.Common.Services
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.lagn.simposioburo.databinding.ActivityMainBinding
 import com.lagn.simposioburo.domain.model.LoginModel
 import com.lagn.simposioburo.domain.model.response.loginResponse.LoginResponse
@@ -55,48 +56,78 @@ class MainActivity : AppCompatActivity() {
 
     private fun login(){
         val mail = mBinding.etCorreo.text.toString()
+        if (!mail.equals("")) {
+            val call = client.getApiClient()?.create(Services::class.java)
+            val cc = call?.loginService(LoginModel(mail))
+            cc?.enqueue(object : Callback<LoginResponse> {
+                override fun onResponse(
+                    call: Call<LoginResponse>,
+                    response: Response<LoginResponse>
+                ) {
+                    Log.i("resp", response.body().toString())
+                    //startActivity(Intent(mBinding.etCorreo.context, HomeActivity::class.java))
 
-        val call = client.getApiClient()?.create(Services::class.java)
-       val cc= call?.loginService(LoginModel(mail))
-        cc?.enqueue(object : Callback<LoginResponse>{
-            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-                Log.i("resp", response.body().toString())
-                //startActivity(Intent(mBinding.etCorreo.context, HomeActivity::class.java))
+                    if (response.isSuccessful) {
+                        val loginRespose = response.body()
 
-                if (response.isSuccessful){
-                    val loginRespose = response.body()
+                        if (loginRespose == null) {
+                            Toast.makeText(
+                                mBinding.etCorreo.context,
+                                "Error en el servidor",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            return
 
-                    if (loginRespose == null){
-                        Toast.makeText(mBinding.etCorreo.context, "Error en el servidor", Toast.LENGTH_SHORT).show()
-                        return
+                        }
+                        if (loginRespose.status == "success") {
+                            Toast.makeText(
+                                mBinding.etCorreo.context,
+                                "Acceso exitoso",
+                                Toast.LENGTH_SHORT
+                            ).show()
+
+                            createSesionPref(loginRespose.access_token)
+                            goToMain()
+
+                        } else {
+                            Toast.makeText(
+                                mBinding.etCorreo.context,
+                                "Las credenciales son incorrectas",
+                                Toast.LENGTH_SHORT
+                            ).show()
+
+                        }
+
+
+                    } else {
+                        Toast.makeText(
+                            mBinding.etCorreo.context,
+                            "Error en el servidor",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
 
                     }
-                    if(loginRespose.status == "success"){
-                        Toast.makeText(mBinding.etCorreo.context, "Acceso exitoso", Toast.LENGTH_SHORT).show()
+                }
 
-                        createSesionPref(loginRespose.access_token)
-                        goToMain()
+                override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
 
-                    }else{
-                        Toast.makeText(mBinding.etCorreo.context, "Las credenciales son incorrectas", Toast.LENGTH_SHORT).show()
-
-                    }
-
-
-                }else{
-                    Toast.makeText(mBinding.etCorreo.context, "Error en el servidor", Toast.LENGTH_SHORT).show()
-
+                    Toast.makeText(
+                        mBinding.etCorreo.context,
+                        "Error en el servidor",
+                        Toast.LENGTH_SHORT
+                    ).show()
 
                 }
-            }
-
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-
-                Toast.makeText(mBinding.etCorreo.context, "Error en el servidor", Toast.LENGTH_SHORT).show()
-
-            }
-        })
-
+            })
+        }
+        else {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Su correo es requerido")
+                .setPositiveButton(R.string.dialog_ok) { _, _ ->
+                }
+                .show()
+        }
     }
 
 

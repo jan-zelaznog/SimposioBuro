@@ -3,8 +3,10 @@ package com.lagn.simposioburo.fragmentsModule
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.lagn.simposioburo.MainActivity
 import com.lagn.simposioburo.R
@@ -12,17 +14,24 @@ import com.lagn.simposioburo.databinding.ActivityHomeBinding
 import com.lagn.simposioburo.fragmentsModule.agendaFragment.AgendaFragment
 import com.lagn.simposioburo.fragmentsModule.descargasFragment.DescargasFragment
 import com.lagn.simposioburo.fragmentsModule.homeFragment.HomeFragment
+import com.lagn.simposioburo.fragmentsModule.ponenteDatosFragment.PonenteDatosFragment
 import com.lagn.simposioburo.fragmentsModule.ponentesFragment.PonentesFragment
 import com.lagn.simposioburo.util.PreferenceHelper
+import com.lagn.simposioburo.util.PreferenceHelper.get
 import com.lagn.simposioburo.util.PreferenceHelper.set
+import kotlin.concurrent.fixedRateTimer
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityHomeBinding
 
-    private lateinit var mActiveFragment: Fragment
+    lateinit var mActiveFragment: Fragment
 
     private lateinit var mFragmentManager: FragmentManager
+
+    lateinit var bottomNavBar: BottomNavigationView
+    private val agendaFragment = AgendaFragment()
+    val ponentesDatosFragment = PonenteDatosFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,10 +67,11 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupBottomNav(){
+        bottomNavBar = mBinding.bottomNav
         mFragmentManager = supportFragmentManager
 
         val homeFragment = HomeFragment()
-        val agendaFragment = AgendaFragment()
+        homeFragment.fragmentParent = this
         val ponentesFragment = PonentesFragment()
         val descargasFragment = DescargasFragment()
 
@@ -84,7 +94,7 @@ class HomeActivity : AppCompatActivity() {
 
 
 
-        mBinding.bottomNav.setOnNavigationItemSelectedListener {
+        bottomNavBar.setOnNavigationItemSelectedListener {
             when(it.itemId){
 
                 R.id.action_home -> {
@@ -115,5 +125,16 @@ class HomeActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    fun changeFragmentToWorkshops() {
+        bottomNavBar.selectedItemId = R.id.action_agenda
+        agendaFragment.getTalleres()
+    }
+
+    fun changeFragmentToConferences() {
+        bottomNavBar.selectedItemId = R.id.action_agenda
+        val tokenS = PreferenceHelper.defaultPrefs(this@HomeActivity).get("access_token","")
+        agendaFragment.getConferencias(tokenS)
     }
 }

@@ -10,8 +10,9 @@
     <string name="hint_spinner">¿Deseas participar en los talleres?</string>
 
 
-    <string name="f1">Sí</string>
-    <string name="f2">No</string>
+    <string name="f1">13 de julio - Talleres</string>
+    <string name="f2">14 de julio -  Plenaria</string>
+    <string name="f3">13 Talleres y 14 Conferencias</string>
     <string name="tv_talleres">Talleres</string>
     <string name="tv_13_Julio">13 de julio</string>
     <string name="tv_conferencias">Conferencias</string>
@@ -19,8 +20,8 @@
     <string name="al_dar_clic">Al dar clic en \"Registrarme\" estás aceptando el</string>
     <string name="aviso_privacidad">Aviso de Privacidad</string>
     <string name="registrarme">Registrarme</string>
-    <string name="tv_la_industria_crediti">La industria crediticia se redefine y</string>
-    <string name="tv_el_conocimiento_avanza">el conocimiento avanza.</string>
+    <string name="tv_la_industria_crediti">¡Te damos la bienvenida al SIMPOSIO BURÓ 2023!</string>
+    <string name="tv_el_conocimiento_avanza">La industria crediticia se redefine y el conocimiento avanza.</string>
     <string name="home_title">INICIO</string>
     <string name="home_agenda">AGENDA</string>
     <string name="home_ponentes">PONENTES</string>
@@ -28,9 +29,9 @@
 
     <string-array name="Respuestas">
 
-
         <item>@string/f1</item>
         <item>@string/f2</item>
+        <item>@string/f3</item>
 
 
     </string-array>
@@ -46,6 +47,7 @@
     <string name="dialog_cerrar_sesion">¿Seguro que desea cerrar sesión?</string>
     <string name="dialog_salir_confirm">si</string>
     <string name="dialog_cancel_confirm">cancelar</string>
+    <string name="dialog_ok">entendido</string>
     <string name="helper_required">Requerido</string>
     <string name="registro_exitoso">Registro exitoso</string>
     <string name="registro_no_exitoso">Revise los campos requeridos</string>

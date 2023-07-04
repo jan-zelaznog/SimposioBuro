@@ -7,19 +7,19 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.lagn.simposioburo.OnClickTalleres
 import com.lagn.simposioburo.R
 import com.lagn.simposioburo.databinding.ItemRv1Binding
 import com.lagn.simposioburo.domain.model.ModelD
 import java.security.AccessController.getContext
 
-class Adapter(private var datosInfo: MutableList<ModelD>): RecyclerView.Adapter<Adapter.MyViewHolder>() {
+class Adapter(private var datosInfo: MutableList<ModelD>, delegate: OnClickTalleres): RecyclerView.Adapter<Adapter.MyViewHolder>() {
 
     private lateinit var mContext: Context
-
+    private var mDelegate = delegate
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
         val mBinding = ItemRv1Binding.bind(view)
-
 
     }
 
@@ -39,8 +39,7 @@ class Adapter(private var datosInfo: MutableList<ModelD>): RecyclerView.Adapter<
 
         with(holder){
 
-            mBinding.cvTalleres.setOnLongClickListener {
-
+            mBinding.cvTalleres.setOnClickListener {
                 if ( !mBinding.cvTalleres.isChecked ) {
 
                     mBinding.cvTalleres.isChecked = true
@@ -60,16 +59,16 @@ class Adapter(private var datosInfo: MutableList<ModelD>): RecyclerView.Adapter<
 
                 }
 
-
+                mDelegate.onSelectWorkshop(datoInfo)
 
 
                 true
             }
 
-            mBinding.tvTallerHorario.text = datoInfo.tallerHorario
-            mBinding.tvNombreApellido.text = datoInfo.name
-            mBinding.tvCargo.text = datoInfo.cargo
-            mBinding.tvDescripcion.text = datoInfo.descripcion
+            mBinding.tvTallerHorario.text = datoInfo.hora_inicio + " " + datoInfo.hora_fin
+            mBinding.tvNombreApellido.text = datoInfo.speaker
+            mBinding.tvCargo.text = datoInfo.puesto
+            mBinding.tvDescripcion.text = datoInfo.titulo
 
 
 

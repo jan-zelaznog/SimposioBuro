@@ -16,7 +16,7 @@ import com.lagn.simposioburo.domain.model.response.talleresResp.Data
 import com.lagn.simposioburo.domain.model.response.talleresResp.Talleresresp
 
 
-class AdapterAgenda(private var datosInfo: MutableList<Data>): RecyclerView.Adapter<AdapterAgenda.MyViewHolderAgenda>() {
+class AdapterAgenda(private var datosInfo: MutableList<ModelD>): RecyclerView.Adapter<AdapterAgenda.MyViewHolderAgenda>() {
 
     private lateinit var contexto:Context
 

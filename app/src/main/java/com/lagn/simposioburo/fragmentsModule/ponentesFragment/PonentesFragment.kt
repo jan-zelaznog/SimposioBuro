@@ -11,21 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.servicestest.Common.Services
 import com.lagn.simposioburo.OnClickAdapter
 import com.lagn.simposioburo.R
-import com.lagn.simposioburo.databinding.FragmentAgendaBinding
 import com.lagn.simposioburo.databinding.FragmentPonentesBinding
-import com.lagn.simposioburo.domain.model.ModelD
-import com.lagn.simposioburo.domain.model.response.conferenciasResponse.ConferenciasResponse
 import com.lagn.simposioburo.domain.model.response.ponentesResponse.PonentesResponse
 import com.lagn.simposioburo.domain.model.response.ponentesResponse.PonentesResponseItem
-import com.lagn.simposioburo.fragmentsModule.agendaFragment.AgendaFragment
-import com.lagn.simposioburo.fragmentsModule.agendaFragment.adapter.AdapterAgenda
-import com.lagn.simposioburo.fragmentsModule.agendaFragment.adapter.AdapterConferencias
-import com.lagn.simposioburo.fragmentsModule.descargasFragment.DescargasFragment
-import com.lagn.simposioburo.fragmentsModule.homeFragment.HomeFragment
 import com.lagn.simposioburo.fragmentsModule.ponenteDatosFragment.PonenteDatosFragment
 import com.lagn.simposioburo.fragmentsModule.ponentesFragment.adapter.AdapterPonentes
-import com.lagn.simposioburo.fragmentsModule.ponentesFragment.model.ModelPonentes
-import com.lagn.simposioburo.fragmentsModule.ponentesFragment.model.toModelPonentes
 import com.lagn.simposioburo.services.Client
 import com.lagn.simposioburo.util.PreferenceHelper
 import com.lagn.simposioburo.util.PreferenceHelper.get
@@ -59,7 +49,7 @@ class PonentesFragment : Fragment(), OnClickAdapter {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         tokenS = PreferenceHelper.defaultPrefs(requireContext()).get("access_token","")
-        Toast.makeText(requireContext(), "TOKEB: $tokenS", Toast.LENGTH_LONG).show()
+        //Toast.makeText(requireContext(), "TOKEB: $tokenS", Toast.LENGTH_LONG).show()
 
         getConferencias(tokenS)
 
@@ -101,15 +91,19 @@ class PonentesFragment : Fragment(), OnClickAdapter {
 
 
     override fun onCk(ponente: PonentesResponseItem) {
-        launchEditFragment()
+        launchEditFragment(ponente)
 
     }
 
 
-    private fun launchEditFragment(args: Bundle? = null) {
+    private fun launchEditFragment(ponente: PonentesResponseItem) {
         val fragmet = PonenteDatosFragment()
-        if (args != null) fragmet.arguments = args
-
+        val args = Bundle()
+        args.putString("name", ponente.nombre)
+        args.putString("job", ponente.puesto)
+        args.putString("bio", ponente.biografia)
+        args.putString("img", ponente.foto)
+        fragmet.arguments = args
         val fragmentManager = this@PonentesFragment.parentFragmentManager
 
         val fragmentTrnsatcion = fragmentManager.beginTransaction()

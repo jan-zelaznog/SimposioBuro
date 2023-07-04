@@ -10,20 +10,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.servicestest.Common.Services
-import com.lagn.simposioburo.OnClickAdapter
 import com.lagn.simposioburo.OnClickDescargas
-import com.lagn.simposioburo.R
 import com.lagn.simposioburo.databinding.FragmentDescargasBinding
-import com.lagn.simposioburo.databinding.FragmentPonentesBinding
-import com.lagn.simposioburo.domain.model.ModelD
-import com.lagn.simposioburo.domain.model.response.ponentesResponse.PonentesResponse
 import com.lagn.simposioburo.domain.model.response.presentacionesResponse.PresentacionesResponse
 import com.lagn.simposioburo.domain.model.response.presentacionesResponse.PresentacionesResponseItem
 import com.lagn.simposioburo.fragmentsModule.descargasFragment.adapter.AdapterDescargas
-import com.lagn.simposioburo.fragmentsModule.descargasFragment.model.ModelDescarga
-import com.lagn.simposioburo.fragmentsModule.ponentesFragment.adapter.AdapterPonentes
-import com.lagn.simposioburo.fragmentsModule.ponentesFragment.model.ModelPonentes
-import com.lagn.simposioburo.fragmentsModule.ponentesFragment.model.toModelPonentes
 import com.lagn.simposioburo.services.Client
 import com.lagn.simposioburo.util.PreferenceHelper
 import com.lagn.simposioburo.util.PreferenceHelper.get
@@ -56,7 +47,7 @@ class DescargasFragment : Fragment(), OnClickDescargas {
 
 
         tokenS = PreferenceHelper.defaultPrefs(requireContext()).get("access_token","")
-        Toast.makeText(requireContext(), "TOKEB: $tokenS", Toast.LENGTH_LONG).show()
+        //Toast.makeText(requireContext(), "TOKEB: $tokenS", Toast.LENGTH_LONG).show()
 
         getPresentaciones(tokenS)
 

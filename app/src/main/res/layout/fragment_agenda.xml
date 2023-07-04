@@ -54,11 +54,13 @@
                 >
 
                 <ImageView
+                    android:id="@+id/cv_13_de_julio_IMG"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_person_chalkboard"
                     />
                 <TextView
+                    android:id="@+id/cv_13_de_julio_DT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_13_Julio"
@@ -69,6 +71,7 @@
                     app:flow_verticalAlign="center"
                     />
                 <TextView
+                    android:id="@+id/cv_13_de_julio_TXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_talleres"
@@ -112,11 +115,13 @@
                 >
 
                 <ImageView
+                    android:id="@+id/cv_14_de_IMG"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_screen_users"
                     />
                 <TextView
+                    android:id="@+id/cv_14_de_DT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_14_de_julio"
@@ -127,6 +132,7 @@
 
                     />
                 <TextView
+                    android:id="@+id/cv_14_de_TXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_conferencias"
@@ -149,7 +155,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="50dp"
             />
         <androidx.recyclerview.widget.RecyclerView
 

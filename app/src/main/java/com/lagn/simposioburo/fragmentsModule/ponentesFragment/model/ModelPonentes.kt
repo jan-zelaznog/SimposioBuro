@@ -8,4 +8,3 @@ data class ModelPonentes(
     var cargoPonente: String,
 )
 
-fun ModelD.toModelPonentes() = ModelPonentes(ponente = name, cargoPonente = cargo)

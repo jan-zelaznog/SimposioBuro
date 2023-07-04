@@ -36,7 +36,7 @@
                 android:layout_height="match_parent"
                 android:text="Alejandro Cortés Luque"
 
-                android:textColor="@color/azul_principal"
+                android:textColor="@color/azul_secundario"
                 android:fontFamily="@font/montserrat_bold"
                 android:textSize="16sp"
                 app:flow_verticalAlign="center"

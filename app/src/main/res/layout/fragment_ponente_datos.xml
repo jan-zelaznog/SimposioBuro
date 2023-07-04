@@ -1,85 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/common_padding_min"
-    android:background="@color/white"
+    android:layout_marginBottom="32dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_main"
     tools:context=".fragmentsModule.ponenteDatosFragment.PonenteDatosFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_padding_min"
+            android:layout_marginEnd="@dimen/common_padding_min"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/white"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imgContainer"
+                android:layout_marginTop="100dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/common_padding_min"
+                app:cardCornerRadius="8dp"
+                android:elevation="10dp">
+                <ImageView
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/img_ponente"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_person_chalkboard"
+
+                    />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/tv_nombre_ponente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_default"
+
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:layout_marginEnd="@dimen/common_padding_default"
+                android:text="Alejandro Cotés Luque"
+
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/azul_secundario"
+                android:textSize="16sp"
+                app:flow_verticalAlign="center"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgContainer"
+                app:layout_constraintTop_toTopOf="@id/imgContainer"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_cargo_ponente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:text="GERENTE COMERCIAL SECTOR FINANCIERO"
+
+                android:textColor="@color/gris_textos_eobs"
+                android:textSize="15sp"
+                app:flow_verticalAlign="center"
+                android:fontFamily="@font/montserrat_regular"
 
 
-    <ImageView
-        android:layout_marginTop="100dp"
-        android:id="@+id/img_ponente"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ic_person_chalkboard"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="@dimen/common_padding_min"
-        />
-
-    <TextView
-        android:id="@+id/tv_nombre_ponente"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/common_padding_default"
-
-        android:layout_marginTop="@dimen/common_padding_default"
-        android:layout_marginEnd="@dimen/common_padding_default"
-        android:text="Alejandro Cotés Luque"
-
-        android:fontFamily="@font/montserrat_bold"
-        android:textColor="@color/rosa_principal"
-        android:textSize="16sp"
-        app:flow_verticalAlign="center"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/img_ponente"
-        app:layout_constraintTop_toTopOf="@id/img_ponente"
-
-        />
-
-    <TextView
-        android:id="@+id/tv_cargo_ponente"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        android:text="GERENTE COMERCIAL SECTOR FINANCIERO"
-
-        android:textColor="@color/gris_textos_eobs"
-        android:textSize="15sp"
-        app:flow_verticalAlign="center"
-        android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintEnd_toEndOf="@id/tv_nombre_ponente"
+                app:layout_constraintStart_toStartOf="@id/tv_nombre_ponente"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_ponente"
 
 
-        app:layout_constraintEnd_toEndOf="@id/tv_nombre_ponente"
-        app:layout_constraintStart_toStartOf="@id/tv_nombre_ponente"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_ponente"
+                />
 
 
-        />
+            <TextView
+                android:id="@+id/tv_cv_ponente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/montserrat_regular"
 
-
-    <TextView
-        android:id="@+id/tv_cv_ponente"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_padding_default"
-
-        android:fontFamily="@font/montserrat_regular"
-
-        android:text="@string/tv_lorem_ipsu"
-        android:textColor="@color/gris_textos_eobs"
-        android:textSize="15sp"
-        app:flow_verticalAlign="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/img_ponente"
-        app:layout_constraintTop_toBottomOf="@+id/img_ponente"
-
-
-        />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+                android:text="@string/tv_lorem_ipsu"
+                android:textColor="@color/gris_textos_eobs"
+                android:textSize="15sp"
+                app:flow_verticalAlign="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/imgContainer"
+                app:layout_constraintTop_toBottomOf="@+id/imgContainer"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
