@@ -1,11 +1,12 @@
 package com.lagn.simposioburo.fragmentsModule.ponentesFragment
 
+import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.servicestest.Common.Services
@@ -22,6 +23,7 @@ import com.lagn.simposioburo.util.PreferenceHelper.get
 import retrofit2.Call
 import retrofit2.Response
 
+
 class PonentesFragment : Fragment(), OnClickAdapter {
 
     private lateinit var mBinding: FragmentPonentesBinding
@@ -35,7 +37,7 @@ class PonentesFragment : Fragment(), OnClickAdapter {
     private lateinit var mActiveFragment: Fragment
 
     private lateinit var mFragmentManager: FragmentManager
-
+    private var tipo = "T"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,14 +52,21 @@ class PonentesFragment : Fragment(), OnClickAdapter {
         super.onViewCreated(view, savedInstanceState)
         tokenS = PreferenceHelper.defaultPrefs(requireContext()).get("access_token","")
         //Toast.makeText(requireContext(), "TOKEB: $tokenS", Toast.LENGTH_LONG).show()
-
-        getConferencias(tokenS)
+        mBinding.cv14De.setOnClickListener {
+            tipo = "C"
+            getPonentes(tokenS)
+        }
+        mBinding.cv13DeJulio.setOnClickListener {
+            tipo = "T"
+            getPonentes(tokenS)
+        }
+        getPonentes(tokenS)
 
 
     }
 
 
-    private fun getConferencias(token: String) {
+    private fun getPonentes(token: String) {
         val call = client.getApiClient()?.create(Services::class.java)
         val cc = call?.getPonentes("Bearer $token")
         cc?.enqueue(object : retrofit2.Callback<PonentesResponse> {
@@ -66,18 +75,26 @@ class PonentesFragment : Fragment(), OnClickAdapter {
                 response: Response<PonentesResponse>,
             ) {
                 val datos = response.body()
-                mAdapter = datos?.let { AdapterPonentes(it, this@PonentesFragment) }!!
+                if (datos != null) {
+                    val day = if (tipo == "T") 13 else 14
+                    val filtered: ArrayList<PonentesResponseItem> = ArrayList()
+                    for (spk in datos) {
+                        if (spk.dia == day) {
+                            filtered.add(spk)
+                        }
+                    }
+                    mAdapter = filtered?.let { AdapterPonentes(it, this@PonentesFragment) }!!
+                        mLinearLayoutManager = LinearLayoutManager(requireContext())
 
-                mLinearLayoutManager = LinearLayoutManager(requireContext())
+                        mBinding.rvPonentes.apply {
+                            setHasFixedSize(true)
 
-                mBinding.rvPonentes.apply {
-                    setHasFixedSize(true)
+                            layoutManager = mLinearLayoutManager
+                            adapter = mAdapter
+                        }
 
-                    layoutManager = mLinearLayoutManager
-                    adapter = mAdapter
+                    }
                 }
-
-            }
 
             override fun onFailure(call: Call<PonentesResponse>, t: Throwable) {
                 Toast.makeText(requireContext(), "Error en el servidor", Toast.LENGTH_SHORT).show()
@@ -85,7 +102,7 @@ class PonentesFragment : Fragment(), OnClickAdapter {
             }
 
         })
-
+        setupButtons()
     }
 
 
@@ -116,5 +133,23 @@ class PonentesFragment : Fragment(), OnClickAdapter {
 
     }
 
+    private fun setupButtons() {
+        if (tipo.equals("C")) {
+            mBinding.cv14De.setCardBackgroundColor(resources.getColor(R.color.azul_secundario))
+            mBinding.cv14DeDT.setTextColor(Color.WHITE)
+            mBinding.cv14DeTXT.setTextColor(Color.WHITE)
+            mBinding.cv13DeJulio.setCardBackgroundColor(Color.WHITE)
+            mBinding.cv13DeJulioDT.setTextColor(resources.getColor(R.color.azul_principal))
+            mBinding.cv13DeJulioTXT.setTextColor(resources.getColor(R.color.azul_secundario))
+        }
+        else {
+            mBinding.cv13DeJulio.setCardBackgroundColor(resources.getColor(R.color.azul_secundario))
+            mBinding.cv13DeJulioDT.setTextColor(Color.WHITE)
+            mBinding.cv13DeJulioTXT.setTextColor(Color.WHITE)
+            mBinding.cv14De.setCardBackgroundColor(Color.WHITE)
+            mBinding.cv14DeDT.setTextColor(resources.getColor(R.color.azul_principal))
+            mBinding.cv14DeTXT.setTextColor(resources.getColor(R.color.azul_secundario))
+        }
+    }
 
 }

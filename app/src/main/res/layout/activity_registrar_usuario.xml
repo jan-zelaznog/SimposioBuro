@@ -7,53 +7,47 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_main"
     tools:context=".registrarModule.RegistrarUsuario">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/common_padding_middle"
+        android:layout_marginStart="48dp">
 
+        <ImageView
+            android:id="@+id/logo_buro"
+            android:layout_width="250dp"
+            android:layout_height="88dp"
+            android:paddingTop="32dp"
+            android:src="@drawable/logo_buro_de_credito"
+             />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/white"
-                android:padding="@dimen/common_padding_middle"
-                android:layout_marginStart="48dp"
-                >
-
-                <ImageView
-                    android:id="@+id/logo_buro"
-                    android:layout_width="250dp"
-                    android:layout_height="88dp"
-                    android:paddingTop="32dp"
-                    android:src="@drawable/logo_buro_de_credito"
-                     />
-
-                <ImageView
-                    android:id="@+id/logo_simposio"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:paddingBottom="50dp"
-                    android:src="@drawable/logo_simposio" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_conferencias"
-
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textSize="23sp"
-                    app:flow_verticalAlign="center"
-                    android:textColor="@color/rosa_principal"
-
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_14_de_julio"
-
-                    android:textColor="@color/rosa_principal"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textSize="23sp"
-                    app:flow_verticalAlign="center"
-                    />
+        <ImageView
+            android:id="@+id/logo_simposio"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingBottom="15dp"
+            android:src="@drawable/logo_simposio" />
+        <TextView
+            android:id="@+id/tv_regresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Ya estás registrado? Ingresa aquí"
+            android:textColor="@color/rosa_principal"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="13sp"
+            app:flow_verticalAlign="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:text="Registro"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="23sp"
+            app:flow_verticalAlign="center"
+            android:textColor="@color/rosa_principal"/>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilNombre"
@@ -162,11 +156,31 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmpresa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_empresa"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            android:layout_marginTop="@dimen/common_padding_default"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilEmpresa"
+                    android:id="@+id/tilPuesto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_empresa"
+                    android:hint="@string/hint_puesto"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     app:boxCornerRadiusBottomStart="15dp"
                     app:boxCornerRadiusTopStart="15dp"
@@ -176,7 +190,7 @@
                     >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etEmpresa"
+                    android:id="@+id/etPuesto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
@@ -210,7 +224,7 @@
                     android:id="@+id/tilSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_spinner"
+                    android:hint="Día de asistencia"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     app:boxCornerRadiusBottomStart="15dp"
                     app:boxCornerRadiusTopStart="15dp"
@@ -233,9 +247,10 @@
                     android:layout_marginTop="32dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_talleres"
+                    android:text="@string/tv_13de_Julio"
                     android:textColor="@color/rosa_principal"
                     android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginBottom="10dp"
                     android:textSize="23sp"
                     app:flow_verticalAlign="center"
 
@@ -245,32 +260,32 @@
                     android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/tv_13_Julio"
-                    android:textColor="@color/rosa_principal"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textSize="23sp"
+                    android:text="@string/tv_talleres_note"
+                    android:textColor="@color/gris_textos_eobs"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
                     app:flow_verticalAlign="center"
                     />
 
-                <androidx.recyclerview.widget.RecyclerView
+                <!-- androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv1"
                     android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-
-
-                    />
-
+                    android:layout_marginTop="10dp" / -->
+                <LinearLayout
+                    android:id="@+id/card_holder"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
                 <TextView
                     android:paddingTop="@dimen/common_padding_default"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text= "@string/al_dar_clic"
-
-
-
-
                     android:fontFamily="@font/montserrat_regular"
                     android:textSize="15sp"
                     app:flow_verticalAlign="center"

@@ -11,10 +11,11 @@
 
 
     <string name="f1">13 de julio - Talleres</string>
-    <string name="f2">14 de julio -  Plenaria</string>
-    <string name="f3">13 Talleres y 14 Conferencias</string>
+    <string name="f2">14 de julio - Plenaria</string>
+    <string name="f3">13 y 14 de Julio - Talleres y Plenaria</string>
+    <string name="tv_13de_Julio">Talleres\n13 de julio</string>
     <string name="tv_talleres">Talleres</string>
-    <string name="tv_13_Julio">13 de julio</string>
+    <string name="tv_talleres_note">Asegura tu lugar en los talleres de interés. Cupo limitado.</string>
     <string name="tv_conferencias">Conferencias</string>
     <string name="tv_14_de_julio">14 de julio</string>
     <string name="al_dar_clic">Al dar clic en \"Registrarme\" estás aceptando el</string>
@@ -51,6 +52,7 @@
     <string name="helper_required">Requerido</string>
     <string name="registro_exitoso">Registro exitoso</string>
     <string name="registro_no_exitoso">Revise los campos requeridos</string>
+    <string name="hint_puesto">Puesto</string>
 
 
 </resources>

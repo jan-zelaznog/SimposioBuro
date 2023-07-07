@@ -21,7 +21,125 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="110dp"
         >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_13_de_julio"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/common_padding_min"
+            app:layout_constraintEnd_toStartOf="@+id/cv_14_de"
+            android:layout_marginTop="@dimen/common_padding_middle"
 
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+
+
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                >
+
+                <ImageView
+                    android:id="@+id/cv_13_de_julio_IMG"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_person_chalkboard"
+                    />
+                <TextView
+                    android:id="@+id/cv_13_de_julio_DT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_talleres"
+
+                    android:textColor="@color/azul_principal"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="23sp"
+                    app:flow_verticalAlign="center"
+                    />
+                <TextView
+                    android:id="@+id/cv_13_de_julio_TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_talleres"
+
+                    android:textColor="@color/azul_secundario"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16sp"
+                    app:flow_verticalAlign="center"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_14_de"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/common_padding_min"
+            app:layout_constraintStart_toEndOf="@id/cv_13_de_julio"
+            android:layout_marginStart="@dimen/common_padding_default"
+
+            android:layout_marginTop="@dimen/common_padding_middle"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+
+            app:cardElevation="10dp"
+            app:cardCornerRadius="15dp"
+
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/cv_14_de_IMG"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_screen_users"
+                    />
+                <TextView
+                    android:id="@+id/cv_14_de_DT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_14_de_julio"
+                    android:textColor="@color/azul_principal"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="23sp"
+                    app:flow_verticalAlign="center"
+
+                    />
+                <TextView
+                    android:id="@+id/cv_14_de_TXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_conferencias"
+                    android:textColor="@color/azul_secundario"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16sp"
+                    app:flow_verticalAlign="center"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPonentes"
@@ -30,9 +148,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_13_de_julio"
             tools:listitem="@layout/item_ponentes_rv"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="40dp"
 
 
             />

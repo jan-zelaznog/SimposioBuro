@@ -44,8 +44,8 @@ class AdapterConferencias(private var datosInfo: MutableList<ConferenciasRespons
             mBinding.tvCargo.text = datoInfo.puesto
             mBinding.tvDescripcion.text =  datoInfo.titulo
             mBinding.tvNombreApellido.text = datoInfo.speaker
-            mBinding.tvHorarioInicio.text = datoInfo.hora_inicio
-            mBinding.tvHorarioFin.text = datoInfo.hora_fin
+            mBinding.tvHorarioInicio.text = datoInfo.hora_inicio?.dropLast(3)
+            mBinding.tvHorarioFin.text = datoInfo.hora_fin?.dropLast(3)
 
             if (datoInfo.descripcion == "Receso"){
                 mBinding.tvDescripcion.setBackgroundResource(R.drawable.gradiente)

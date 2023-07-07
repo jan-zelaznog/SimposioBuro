@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tvTallerHorario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="16sp"
+        android:textColor="@color/gris_textos_eobs"
+        android:text="Taller en Horario 00:00 a 00:00"
+        android:paddingBottom="@dimen/common_padding_default" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_talleres"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/common_padding_min"
+        android:visibility="gone"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_circle_check"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginEnd="@dimen/common_padding_min"
+                    / -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/common_padding_default"
+
+
+
+                    >
+                    <TextView
+
+                        android:id="@+id/tvDescripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:id="@+id/tvNombreApellido"
+                        android:paddingTop="@dimen/common_padding_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre Apellido"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="13sp"
+                        android:textColor="@color/gris_textos_eobs"
+                        />
+                    <TextView
+                        android:id="@+id/tvCargo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cargo del ponente"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="9sp"
+                        android:textColor="@color/gris_textos_eobs"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>

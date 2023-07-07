@@ -1,74 +1,47 @@
 package com.lagn.simposioburo.domain.model
 
 import com.google.gson.annotations.SerializedName
+data class UserModel(
+    val nom:String, val apellidoP:String,
+    val apellidoM:String, val mail:String, val Empresa:String, val phone:String,
+    val Puesto:String, val Asistencia: String, val talleres:Array<Int>)
+{
+    @SerializedName("email")
+    private var email: String = ""
 
-class UserModel {
     @SerializedName("nombre")
-    private var nombre: String? = null
+    private var nombre: String = ""
 
     @SerializedName("apellido_paterno")
-    private var apellido_paterno: String? = null
+    private var apellido_paterno: String = ""
 
     @SerializedName("apellido_materno")
-    private var apellido_materno: String? = null
-
-    @SerializedName("email")
-    private var email: String? = null
+    private var apellido_materno: String = ""
 
     @SerializedName("empresa")
-    private var empresa: String? = null
-
-    @SerializedName("puesto")
-    private var puesto: String? = null
+    private var empresa: String = ""
 
     @SerializedName("telefono")
-    private var telefono: String? = null
+    private var telefono: String = ""
+
+    @SerializedName("puesto")
+    private var puesto: String = ""
 
     @SerializedName("asistencia")
-    private var asistencia: String? = null
+    private var asistencia: String = ""
 
-    fun UserModel(nombre: String?, apellido_paterno: String?, apellido_materno: String?,
-                  email: String?, empresa: String?, puesto: String?, telefono: String?, asistencia: String?) {
-        this.nombre = nombre
-        this.apellido_paterno = apellido_paterno
-        this.apellido_materno = apellido_materno
-        this.email = email
-        this.empresa = empresa
-        this.puesto = puesto
-        this.telefono = telefono
-        this.asistencia = asistencia
+    @SerializedName("talleres_ids")
+    private var talleres_ids: Array<Int> = arrayOf(0)
+
+    init {
+        this.email = mail
+        this.nombre = nom
+        this.apellido_paterno = apellidoP
+        this.apellido_materno = apellidoM
+        this.empresa = Empresa
+        this.puesto = Puesto
+        this.telefono = phone
+        this.asistencia = Asistencia
+        this.talleres_ids = talleres
     }
-
-    fun getNombre(): String? {
-        return nombre
-    }
-
-    fun getApPaterno(): String? {
-        return apellido_paterno
-    }
-
-    fun getApMaterno(): String? {
-        return apellido_materno
-    }
-
-    fun getEmail(): String? {
-        return email
-    }
-
-    fun getEmpresa(): String? {
-        return empresa
-    }
-
-    fun getPuesto(): String? {
-        return puesto
-    }
-
-    fun getTelefono(): String? {
-        return telefono
-    }
-
-    fun getAsistencia(): String? {
-        return asistencia
-    }
-
 }

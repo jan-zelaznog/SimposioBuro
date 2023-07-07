@@ -41,36 +41,22 @@ class Adapter(private var datosInfo: MutableList<ModelD>, delegate: OnClickTalle
 
             mBinding.cvTalleres.setOnClickListener {
                 if ( !mBinding.cvTalleres.isChecked ) {
-
                     mBinding.cvTalleres.isChecked = true
-
                     mBinding.cvTalleres.background = ContextCompat.getDrawable(mContext,R.drawable.gradiente_radius)
-
-
-
                 }
-
-
                 else {
                     mBinding.cvTalleres.isChecked = false
                     mBinding.cvTalleres.background = ContextCompat.getDrawable(mContext,R.drawable.state_cv)
-
-
-
                 }
-
-                mDelegate.onSelectWorkshop(datoInfo)
-
-
+                //mDelegate.onSelectWorkshop(datoInfo)
                 true
             }
 
-            mBinding.tvTallerHorario.text = datoInfo.hora_inicio + " " + datoInfo.hora_fin
+            mBinding.tvTallerHorario.text = "Taller en horario " + datoInfo.hora_inicio?.dropLast(3) + " " + datoInfo.hora_fin?.dropLast(3)
             mBinding.tvNombreApellido.text = datoInfo.speaker
             mBinding.tvCargo.text = datoInfo.puesto
             mBinding.tvDescripcion.text = datoInfo.titulo
-
-
+            mBinding.cvTalleres.background = ContextCompat.getDrawable(mContext,R.drawable.state_cv)
 
         }
 
